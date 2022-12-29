@@ -11,29 +11,139 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This package is to achieve Glassmorphism in your flutter application. It's a new and modern design
+UI/UX implementation. This package has multiple widgets (i.e. Container, Button, Card, Switch,
+Dropdown, Tabbar, Drawer etc.) to use. You can use it anywhere inside your flutter application.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+1: Add the latest version of the package to your pubspec.yaml (and run `dart pub get`):
 
-## Usage
+```yaml
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+dependencies:
+  flutter_glassmorpism: ^0.0.1
 
-```dart
-const like = 'sample';
 ```
 
-## Additional information
+2: Import the package and use it in your Flutter app.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+
+import 'package:flutter_glassmorpism/flutter_glassmorpism.dart';
+
+```
+
+## Example
+
+There are multiple properties that you can modify :
+
+  - height
+  - width
+  - padding
+  - margin
+
+<hr>
+
+
+
+
+<table>
+
+
+<tr>
+
+
+<td>
+
+
+```dart
+
+class GlassmorphicContainer extends StatefulWidget {
+  final double? width;
+  final double? height;
+  final Widget child;
+  final double? borderRadius;
+  final Color? borderColor;
+  final EdgeInsets? padding;
+  final EdgeInsets? margin;
+  final VoidCallback? onPressed;
+
+  const GlassmorphicContainer(
+      {Key? key,
+        this.width,
+        this.height,
+        required this.child,
+        this.borderRadius,
+        this.borderColor,
+        this.onPressed,
+        this.padding,
+        this.margin})
+      : super(key: key);
+
+  @override
+  State<GlassmorphicContainer> createState() => _GlassmorphicContainerState();
+}
+
+class _GlassmorphicContainerState extends State<GlassmorphicContainer> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: widget.onPressed,
+      child: Container(
+        width: widget.width ?? MediaQuery.of(context).size.width,
+        height: widget.height ?? MediaQuery.of(context).size.height,
+        padding: widget.padding ?? EdgeInsets.zero,
+        margin: widget.margin ?? EdgeInsets.zero,
+        decoration: BoxDecoration(
+            border:
+            Border.all(width: 1, color: widget.borderColor ?? Colors.white),
+            borderRadius: BorderRadius.circular(widget.borderRadius ?? 10.0),
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colors.white.withOpacity(0.2),
+                  Colors.white.withOpacity(0.5),
+                ])),
+        child: widget.child,
+      ),
+    );
+  }
+}
+
+```
+
+</td>
+
+
+<td>
+
+<img src="https://github.com/bijumondal18/bouncy_container_flutter_package/blob/main/lib/src/BouncingContainer.png" alt="Sample Image">
+
+</td>
+
+</tr>
+
+</table>
+
+## Next Goals
+
+- [x] Add animation effect on click.
+
+- [x] Add ripple effect on click.
+
+- [x] Add more custom widgets to the package.
