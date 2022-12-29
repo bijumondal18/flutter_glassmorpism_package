@@ -1,7 +1,7 @@
 name: flutter_glassmorpism
-description: A new Flutter package project.
+description: Glassmorphic Widgets
 version: 0.0.1
-homepage:
+homepage: https://github.com/bijumondal18/flutter_glassmorpism_package
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
