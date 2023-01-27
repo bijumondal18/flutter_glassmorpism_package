@@ -1,5 +1,7 @@
 name: flutter_glassmorpism
-description: Glassmorphic Widgets
+description: This package is to achieve Glassmorphism in your flutter application. It's a new and modern design
+  UI/UX implementation. This package has multiple widgets (i.e. Container, Button, Card, Switch,
+  Dropdown, Tabbar, Drawer etc.) to use. You can use it anywhere inside your flutter application.
 version: 0.0.1
 homepage: https://github.com/bijumondal18/flutter_glassmorpism_package
 
