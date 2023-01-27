@@ -1,7 +1,7 @@
 name: flutter_glassmorpism
 description: This package is to achieve Glassmorphism in your flutter application. It's a new and modern design
   UI/UX implementation. You can use it anywhere inside your flutter application.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/bijumondal18/flutter_glassmorpism_package
 
 environment:
