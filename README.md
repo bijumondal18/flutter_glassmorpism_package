@@ -129,4 +129,6 @@ class GlassmorphicContainer extends StatelessWidget {
 
 - [x] Add ripple effect on click.
 
-- [x] Add more custom widgets to the package.
+- [x] Add more custom widgets.
+
+- [x] Add shape properties.
