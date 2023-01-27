@@ -1,3 +1,7 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Simple glassmorphic container
+
+## 0.0.2
+
+* long description added
